@@ -1,0 +1,3 @@
+[submodule "hello-world-javascrip-action"]
+	path = hello-world-javascrip-action
+	url = https://github.com/actions/hello-world-javascript-action.git
