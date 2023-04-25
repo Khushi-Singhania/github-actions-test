@@ -1,2 +1,2 @@
-console.log('Hello, Khushi!');
-console.log(date);
+console.log('Hello, Demo!');
+console.log(Date);
