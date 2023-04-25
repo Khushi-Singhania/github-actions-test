@@ -1,2 +1,3 @@
 console.log('Hello, Demo!');
-console.log(Date);
+const d= new Date();
+console.log(d);
