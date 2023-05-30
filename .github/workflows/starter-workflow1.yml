@@ -6,3 +6,10 @@ on:
 jobs:
     call-workflow-in-local-repo:
         uses: ./.github/workflows/reusable-workflow1.yml
+    
+    print-deploy-result:
+        needs: call-workflow-in-local-repo
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print deployment result
+              run: echo "${{ needs.deploy.outputs.result}}"
