@@ -1,0 +1,26 @@
+name: Manual Workflow
+
+on:
+    workflow_dispatch:
+        inputs:
+            loglevel:
+                description: 'Log Level'
+                required: true
+                default: warning
+            tags:
+                description: 'Test Scenario Tags'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v3
+            
+            - name: Say Something
+              run: |
+                  echo " Hi, I have been manually triggered"
+            
+            - run: |
+                echo "Log Level: ${{ github.event.inputs.loglevel }}"
+                echo "Tags: ${{ github.event.inputs.tags }}"
