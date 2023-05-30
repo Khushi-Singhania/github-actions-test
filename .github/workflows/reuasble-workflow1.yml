@@ -1,7 +1,7 @@
 name: Reuable Workflow 1
 
 on:
-    workflow-call:
+    workflow_call:
 
 jobs:
     job1-rw:
