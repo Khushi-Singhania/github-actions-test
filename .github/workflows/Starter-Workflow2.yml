@@ -1,0 +1,8 @@
+name: My Starter Workflow 2
+
+on: 
+    workflow_dispatch:
+
+jobs: 
+    call-workflow-using-branch:
+        uses: Khushi-Singhania/CompositeActions/.github/worflows/reusable-workflow2.yml@main
