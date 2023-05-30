@@ -1,0 +1,14 @@
+name: Reuable Workflow 1
+
+on:
+    workflow-call:
+
+jobs:
+    job1-rw:
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v3
+            - name: Writing on the log
+              run: |
+                  echo "I am Reusable Workflow One"
+    
