@@ -2,6 +2,10 @@ name: Reusable Workflow 1
 
 on:
     workflow_call:
+            outputs:
+                    result:
+                            description: The result of the deployment operation
+                            value: ${{ jobs.deploy.outputs.outcome}}
 
 jobs:
     job1-rw:
@@ -11,4 +15,11 @@ jobs:
             - name: Writing on the log
               run: |
                   echo "I am Reusable Workflow One"
+    deploy:
+            outputs:
+                    outcome: ${{ steps.set-result.outputs.step-result }}
+            runs-on: ubuntu-latest
+            steps:
+                    - name: Set result output
+                      run: echo "step-result=success" >> $GITHUB_OUTPUT
     
