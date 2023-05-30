@@ -21,5 +21,6 @@ jobs:
             runs-on: ubuntu-latest
             steps:
                     - name: Set result output
-                      run: echo "step-result=success" >> $GITHUB_OUTPUT
+                      id: set-result
+                      run: echo " ::set-output name=step-result::success"
     
