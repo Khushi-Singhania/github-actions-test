@@ -5,4 +5,4 @@ on:
 
 jobs: 
     call-workflow-using-branch:
-        uses: Khushi-Singhania/CompositeActions/.github/worflows/reusable-workflow2.yml@main
+        uses: Khushi-Singhania/CompositeActions/.github/workflows/reusable-workflow2.yml@main
